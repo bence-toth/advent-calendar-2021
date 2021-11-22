@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -34,6 +35,13 @@ body > header {
   border-bottom: 0.25vh solid hsla(0, 0%, 100%, 85%);
   background-color: hsla(0, 0%, 100%, 65%);
   backdrop-filter: blur(0.2vh);
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+body.modalVisible > header {
+  opacity: 0;
+  pointer-events: none;
 }
 
 body > footer {
@@ -46,6 +54,13 @@ body > footer {
   background-color: hsla(0, 0%, 100%, 65%);
   backdrop-filter: blur(0.2vh);
   font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+body.modalVisible > footer {
+  opacity: 0;
+  pointer-events: none;
 }
 
 h1 {
@@ -59,6 +74,13 @@ main {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 5vh;
   padding: 10vh;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+body.modalVisible main {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -98,7 +120,7 @@ main {
   opacity: 0;
   transition: opacity 0.5s;
   border-radius: 1vh;
-  border: 0.5vh solid #3581ac;
+  border: 0.5vh solid #7ea0ae;
 }
 
 .day:not(:disabled) {
@@ -124,6 +146,51 @@ main {
   align-items: center;
   justify-content: center;
   text-shadow: 0 0 5px white;
+}
+
+#modal {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 1fr;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 1s;
+  transition-delay: 0.5s;
+  background-color: hsla(0, 0%, 100%, 65%);
+  backdrop-filter: blur(0.2vh);
+  overflow: hidden;
+  overflow-y: auto;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+#modal:empty {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+#modal > header {
+  font-family: "Amatic SC", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vh;
+}
+
+#modal > .content {
+  max-width: 720px;
+  width: calc(100% - 5vw);
+  margin: 0 auto 5vh;
+  font-size: 2vh;
+  line-height: 1.5;
+}
+
+#modal h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 5vh;
+  margin-bottom: 0.5em;
 }
 
 #snow {

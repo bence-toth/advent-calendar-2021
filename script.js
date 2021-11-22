@@ -37,7 +37,7 @@ document.querySelector("main").innerHTML = Array(24)
   .map(
     (date) => `
       <div class="dayWrapper">
-        <button class="day" ${date > 14 ? "disabled" : ""}>
+        <button class="day" ${date > 14 ? "disabled" : ""} data-date="${date}">
           <div class="background"></div>
           <div class="date">${date}</div>
         </button>
@@ -45,3 +45,17 @@ document.querySelector("main").innerHTML = Array(24)
     `
   )
   .join("");
+
+document.querySelectorAll("button.day").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.body.classList.add("modalVisible");
+    const date = parseInt(button.dataset.date);
+    document.getElementById("modal").innerHTML = `
+      <header><h2>Day #${date}</h2></header>
+      <div class="content">
+        <h3>${content[date - 1].title}</h3>
+        ${content[date - 1].body}
+      </div>
+    `;
+  });
+});
