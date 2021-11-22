@@ -30,3 +30,18 @@ document.getElementById("snow").innerHTML = Array(numberOfSnowflakes)
     `
   )
   .join("");
+
+document.querySelector("main").innerHTML = Array(24)
+  .fill()
+  .map((_, index) => index + 1)
+  .map(
+    (date) => `
+      <div class="dayWrapper">
+        <button class="day" ${date > 14 ? "disabled" : ""}>
+          <div class="background"></div>
+          <div class="date">${date}</div>
+        </button>
+      </div>
+    `
+  )
+  .join("");

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +18,120 @@ body {
   height: 100%;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 1fr 5vh;
+  overflow: hidden;
+}
+
+body > header {
+  font-family: "Amatic SC", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vh;
+  border-bottom: 0.25vh solid hsla(0, 0%, 100%, 85%);
+  background-color: hsla(0, 0%, 100%, 65%);
+  backdrop-filter: blur(0.2vh);
+}
+
+body > footer {
+  font-family: "Amatic SC", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vh;
+  border-top: 0.25vh solid hsla(0, 0%, 100%, 85%);
+  background-color: hsla(0, 0%, 100%, 65%);
+  backdrop-filter: blur(0.2vh);
+  font-weight: bold;
+}
+
+h1 {
+  text-shadow: 0 0 3px white;
+}
+
+main {
+  font-family: "Amatic SC", cursive;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 5vh;
+  padding: 10vh;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2vh;
+    padding: 2vh;
+  }
+}
+
+.dayWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day {
+  border: 0.25vh solid hsla(0, 0%, 100%, 85%);
+  background-color: hsla(0, 0%, 100%, 65%);
+  backdrop-filter: blur(0.2vh);
+  border-radius: 1vh;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  outline: 0;
+  color: black;
+  max-width: 10vmax;
+  width: 100%;
+  height: 100%;
+}
+
+.day .background {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 1vh;
+  border: 0.5vh solid #3581ac;
+}
+
+.day:not(:disabled) {
+  cursor: pointer;
+}
+
+.day:disabled {
+  opacity: 0.3;
+  color: hsla(0, 0%, 0%, 50%);
+}
+
+.day:not(:disabled):hover .background,
+.day:not(:disabled):focus .background {
+  opacity: 0.8;
+}
+
+.day .date {
+  position: absolute;
+  inset: 0;
+  font-size: 10vh;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 5px white;
+}
+
 #snow {
   user-select: none;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .snowflakeWrapper {
