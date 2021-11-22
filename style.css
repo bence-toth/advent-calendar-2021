@@ -7,23 +7,19 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url(./background.jpg);
-  background-size: cover;
-  background-position: center center;
-  overflow: hidden;
-}
-
 html,
 body {
   height: 100%;
 }
 
 body {
+  background-image: url(./background.jpg);
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 1fr 5vh;
-  overflow: hidden;
 }
 
 body > header {
