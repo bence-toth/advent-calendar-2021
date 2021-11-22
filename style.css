@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./background.jpg);
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#snow {
+  user-select: none;
+}
+
+.snowflakeWrapper {
+  position: absolute;
+  animation: snowingVertical linear infinite;
+  width: 5vw;
+}
+
+@keyframes snowingVertical {
+  from {
+    transform: translateY(-0.3vmax);
+  }
+
+  to {
+    transform: translateY(calc(100vh + 0.3vmax));
+  }
+}
+
+.snowflake {
+  position: absolute;
+  animation: snowingHorizontal ease-in-out infinite;
+}
+
+.snowflakeFill {
+  width: 0.3vmax;
+  height: 0.3vmax;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@keyframes snowingHorizontal {
+  from {
+    transform: translateX(-2.5vh);
+  }
+
+  50% {
+    transform: translateX(2.5vh);
+  }
+
+  to {
+    transform: translateX(-2.5vh);
+  }
+}
