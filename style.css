@@ -238,6 +238,12 @@ body.modalVisible main {
   margin-bottom: 0.5em;
 }
 
+@media (max-aspect-ratio: 1/1) {
+  #modal .content {
+    font-size: 2.5vh;
+  }
+}
+
 #modal .content h2:after {
   content: " – ";
 }
