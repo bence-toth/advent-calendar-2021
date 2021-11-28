@@ -200,7 +200,6 @@ body.modalVisible main {
 .snowflakeWrapper {
   position: absolute;
   animation: snowingVertical linear infinite;
-  width: 5vw;
 }
 
 @keyframes snowingVertical {
