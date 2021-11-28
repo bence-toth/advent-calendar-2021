@@ -1,3 +1,5 @@
+let isSnowing = false;
+
 const animationDuration = 10;
 const numberOfSnowflakes = Math.round(
   (window.innerWidth * window.innerHeight) / 2000
@@ -30,6 +32,14 @@ document.getElementById("snow").innerHTML = Array(numberOfSnowflakes)
     `
   )
   .join("");
+
+document.getElementById("snowToggle").addEventListener("click", () => {
+  isSnowing = !isSnowing;
+  document.getElementById("snowToggle").innerText = isSnowing
+    ? "Stop the snow"
+    : "Let it snow";
+  document.getElementById("snow").classList.toggle("hidden");
+});
 
 document.querySelector("main").innerHTML = Array(24)
   .fill()
