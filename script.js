@@ -83,7 +83,10 @@ document.querySelectorAll(".dayWrapper").forEach((wrapper) => {
     document.getElementById("modal").innerHTML = `
       <header><h2>Day #${date}</h2></header>
       <div class="content">
-        <h3>${content[date - 1].title}</h3>
+        <hgroup>
+          <h2>Day #${date}</h2>
+          <h3>${content[date - 1].title}</h3>
+        </hgroup>
         ${content[date - 1].body}
       </div>
     `;

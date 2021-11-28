@@ -37,6 +37,17 @@ body > header {
   backdrop-filter: blur(0.2vh);
 }
 
+@media (max-aspect-ratio: 1/1) {
+  body > header {
+    justify-content: flex-start;
+    font-size: 2vh;
+    padding: 0 2vh;
+  }
+  body > header h1 br {
+    display: inline;
+  }
+}
+
 body.modalVisible > header {
   display: none;
 }
@@ -58,6 +69,11 @@ body.modalVisible > footer {
 
 h1 {
   text-shadow: 0 0 3px white;
+  line-height: 1;
+}
+
+h1 br {
+  display: none;
 }
 
 main {
@@ -197,6 +213,12 @@ body.modalVisible main {
   font-size: 2.5vh;
 }
 
+@media (max-aspect-ratio: 1/2) {
+  #modal header h2 {
+    display: none;
+  }
+}
+
 #modal > .content {
   max-width: 720px;
   width: calc(100% - 5vw);
@@ -206,10 +228,22 @@ body.modalVisible main {
   font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
-#modal h3 {
+#modal .content h2,
+#modal .content h3 {
+  display: inline;
   font-family: "Amatic SC", cursive;
   font-size: 5vh;
   margin-bottom: 0.5em;
+}
+
+#modal .content h2:after {
+  content: " – ";
+}
+
+@media (min-aspect-ratio: 1/2) {
+  #modal .content h2 {
+    display: none;
+  }
 }
 
 #snow {
@@ -249,6 +283,13 @@ body.modalVisible main {
   height: 0.3vmax;
   background-color: white;
   border-radius: 50%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .snowflakeFill {
+    width: 0.6vmax;
+    height: 0.6vmax;
+  }
 }
 
 @keyframes snowingHorizontal {
