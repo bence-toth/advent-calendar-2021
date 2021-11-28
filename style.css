@@ -21,6 +21,7 @@ body {
   background-image: url(./background.jpg);
   background-size: cover;
   background-position: bottom center;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 1fr 5vh;
@@ -368,7 +369,7 @@ body.modalVisible main {
 }
 
 @media (max-aspect-ratio: 1/1) {
-  body.modalVisible #bottomGradient {
+  #bottomGradient {
     display: block;
   }
 }
