@@ -368,7 +368,7 @@ body.modalVisible main {
 }
 
 @media (max-aspect-ratio: 1/1) {
-  #bottomGradient {
+  body.modalVisible #bottomGradient {
     display: block;
   }
 }
