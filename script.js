@@ -1,5 +1,8 @@
+const today = new Date();
+const adventBegins = new Date("2021-11-27"); // TODO: Fix me
+const day = Math.ceil((today - adventBegins) / (1000 * 60 * 60 * 24));
+
 const openedDays = JSON.parse(localStorage.getItem("openedDays")) || [];
-console.log(openedDays);
 
 let isSnowing = false;
 
@@ -52,9 +55,9 @@ document.querySelector("main").innerHTML = Array(24)
       <div class="
         dayWrapper
         ${openedDays.includes(date) ? "opened" : ""}
-        ${date > 14 ? "locked" : ""}
+        ${date > day ? "locked" : ""}
       ">
-        <button class="day" ${date > 14 ? "disabled" : ""} data-date="${date}">
+        <button class="day" ${date > day ? "disabled" : ""} data-date="${date}">
           <div class="background"></div>
           <div class="date">${date}</div>
         </button>
