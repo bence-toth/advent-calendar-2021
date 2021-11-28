@@ -1,3 +1,6 @@
+const openedDays = JSON.parse(localStorage.getItem("openedDays")) || [];
+console.log(openedDays);
+
 let isSnowing = false;
 
 const animationDuration = 10;
@@ -46,21 +49,37 @@ document.querySelector("main").innerHTML = Array(24)
   .map((_, index) => index + 1)
   .map(
     (date) => `
-      <div class="dayWrapper">
+      <div class="
+        dayWrapper
+        ${openedDays.includes(date) ? "opened" : ""}
+        ${date > 14 ? "locked" : ""}
+      ">
         <button class="day" ${date > 14 ? "disabled" : ""} data-date="${date}">
           <div class="background"></div>
           <div class="date">${date}</div>
         </button>
+        <div class="lock icon">
+          <img src="./lock.svg" alt="Locked" />
+        </div>
+        <div class="opened icon">
+          <img src="./check.svg" alt="Opened" />
+        </div>
       </div>
     `
   )
   .join("");
 
-document.querySelectorAll("button.day").forEach((button) => {
+document.querySelectorAll(".dayWrapper").forEach((wrapper) => {
+  const button = wrapper.querySelector("button");
   button.addEventListener("click", () => {
     document.body.classList.add("modalVisible");
     document.querySelector("#back").classList.remove("hidden");
     const date = parseInt(button.dataset.date);
+    if (!openedDays.includes(date)) {
+      openedDays.push(date);
+      localStorage.setItem("openedDays", JSON.stringify(openedDays));
+    }
+    wrapper.classList.add("opened");
     document.getElementById("modal").innerHTML = `
       <header><h2>Day #${date}</h2></header>
       <div class="content">
