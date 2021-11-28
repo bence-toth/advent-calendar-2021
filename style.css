@@ -10,6 +10,7 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 button {
@@ -19,8 +20,7 @@ button {
 body {
   background-image: url(./background.jpg);
   background-size: cover;
-  background-position: center center;
-  overflow: hidden;
+  background-position: bottom center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 1fr 5vh;
@@ -196,7 +196,6 @@ body.modalVisible main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 1fr;
-  overflow: hidden;
   background-color: hsla(0, 0%, 100%, 65%);
   backdrop-filter: blur(0.2vh);
   overflow: hidden;
@@ -254,6 +253,7 @@ body.modalVisible main {
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 #snow.hidden {
@@ -318,13 +318,14 @@ body.modalVisible main {
   font-size: 3vh;
   font-weight: bold;
   border: 3px solid #7ea0ae;
-  background-color: hsla(0, 0%, 100%, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.75);
   border-radius: 1vh;
   transition: background-color 0.5s;
+  backdrop-filter: blur(0.2vh);
 }
 
 #snowToggle:hover {
-  background-color: hsla(0, 0%, 100%, 0.8);
+  background-color: hsla(0, 0%, 100%, 0.9);
 }
 
 #back {
@@ -337,15 +338,130 @@ body.modalVisible main {
   font-size: 3vh;
   font-weight: bold;
   border: 3px solid #7ea0ae;
-  background-color: hsla(0, 0%, 100%, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.75);
   border-radius: 1vh;
   transition: background-color 0.5s;
+  backdrop-filter: blur(0.2vh);
 }
 
 #back:hover {
-  background-color: hsla(0, 0%, 100%, 0.8);
+  background-color: hsla(0, 0%, 100%, 0.9);
 }
 
 #back.hidden {
   display: none;
+}
+
+#bottomGradient {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(0, 0%, 100%, 0) 100%
+  );
+  z-index: -1;
+  display: none;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  #bottomGradient {
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background-image: url(./background-dark.jpg);
+    background-position: bottom center;
+    background-color: black;
+  }
+
+  body > header {
+    border-bottom: 0.25vh solid hsla(0, 0%, 0%, 85%);
+    background-color: hsla(0, 0%, 0%, 65%);
+  }
+
+  body > footer {
+    border-top: 0.25vh solid hsla(0, 0%, 0%, 85%);
+    background-color: hsla(0, 0%, 0%, 65%);
+  }
+
+  h1 {
+    text-shadow: 0 0 3px black;
+    line-height: 1;
+  }
+
+  .day {
+    border: 0.25vh solid hsla(0, 0%, 0%, 85%);
+    background-color: hsla(0, 0%, 0%, 65%);
+    color: white;
+  }
+
+  .day .background {
+    background-color: black;
+    border: 0.5vh solid #1c2436;
+  }
+
+  .day:disabled {
+    color: hsla(0, 0%, 100%, 50%);
+  }
+
+  .day .date {
+    text-shadow: 0 0 5px black;
+  }
+
+  .dayWrapper .opened {
+    background-color: hsl(132, 23%, 59%);
+    border-color: hsl(132, 23%, 39%);
+  }
+
+  .dayWrapper .lock {
+    background-color: hsl(0, 23%, 59%);
+    border-color: hsl(0, 23%, 39%);
+  }
+
+  #modal {
+    background-color: hsla(0, 0%, 0%, 65%);
+  }
+
+  .snowflake {
+    opacity: 0.35;
+  }
+
+  .snowflakeFill {
+    background-color: white;
+  }
+
+  #snowToggle {
+    color: white;
+    border: 3px solid #1c2436;
+    background-color: hsla(0, 0%, 0%, 0.75);
+  }
+
+  #snowToggle:hover {
+    background-color: hsla(0, 0%, 0%, 0.9);
+  }
+
+  #back {
+    color: white;
+    border: 3px solid #1c2436;
+    background-color: hsla(0, 0%, 0%, 0.75);
+  }
+
+  #back:hover {
+    background-color: hsla(0, 0%, 0%, 0.9);
+  }
+
+  #bottomGradient {
+    background: linear-gradient(
+      0deg,
+      hsla(0, 0%, 0%, 1) 0%,
+      hsla(0, 0%, 0%, 0) 100%
+    );
+  }
 }
