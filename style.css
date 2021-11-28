@@ -35,17 +35,13 @@ body > header {
   border-bottom: 0.25vh solid hsla(0, 0%, 100%, 85%);
   background-color: hsla(0, 0%, 100%, 65%);
   backdrop-filter: blur(0.2vh);
-  opacity: 1;
-  transition: opacity 0.5s;
 }
 
 body.modalVisible > header {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 body > footer {
-  font-family: "Amatic SC", cursive;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,13 +50,10 @@ body > footer {
   background-color: hsla(0, 0%, 100%, 65%);
   backdrop-filter: blur(0.2vh);
   font-weight: bold;
-  opacity: 1;
-  transition: opacity 0.5s;
 }
 
 body.modalVisible > footer {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 h1 {
@@ -73,13 +66,10 @@ main {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 5vh;
   padding: 10vh;
-  opacity: 1;
-  transition: opacity 0.5s;
 }
 
 body.modalVisible main {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -154,20 +144,15 @@ body.modalVisible main {
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 1fr;
   overflow: hidden;
-  opacity: 1;
-  transition: opacity 1s;
-  transition-delay: 0.5s;
   background-color: hsla(0, 0%, 100%, 65%);
   backdrop-filter: blur(0.2vh);
   overflow: hidden;
   overflow-y: auto;
-  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 #modal:empty {
   width: 0;
   height: 0;
-  opacity: 0;
 }
 
 #modal > header {
@@ -183,6 +168,7 @@ body.modalVisible main {
   margin: 0 auto 5vh;
   font-size: 2vh;
   line-height: 1.5;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 #modal h3 {
@@ -261,4 +247,27 @@ body.modalVisible main {
 
 #snowToggle:hover {
   background-color: hsla(0, 0%, 100%, 0.8);
+}
+
+#back {
+  cursor: pointer;
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  height: 6vh;
+  padding: 0 3vh;
+  font-size: 3vh;
+  font-weight: bold;
+  border: 3px solid #7ea0ae;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border-radius: 1vh;
+  transition: background-color 0.5s;
+}
+
+#back:hover {
+  background-color: hsla(0, 0%, 100%, 0.8);
+}
+
+#back.hidden {
+  display: none;
 }

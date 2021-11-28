@@ -59,6 +59,7 @@ document.querySelector("main").innerHTML = Array(24)
 document.querySelectorAll("button.day").forEach((button) => {
   button.addEventListener("click", () => {
     document.body.classList.add("modalVisible");
+    document.querySelector("#back").classList.remove("hidden");
     const date = parseInt(button.dataset.date);
     document.getElementById("modal").innerHTML = `
       <header><h2>Day #${date}</h2></header>
@@ -68,4 +69,10 @@ document.querySelectorAll("button.day").forEach((button) => {
       </div>
     `;
   });
+});
+
+document.querySelector("#back").addEventListener("click", () => {
+  document.body.classList.remove("modalVisible");
+  document.querySelector("#back").classList.add("hidden");
+  document.getElementById("modal").innerHTML = "";
 });
