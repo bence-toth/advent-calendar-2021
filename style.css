@@ -244,7 +244,29 @@ body.modalVisible main {
   display: inline;
   font-family: "Amatic SC", cursive;
   font-size: 5vh;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+.content p,
+.content pre {
+  margin-bottom: 1em;
+}
+
+.content code,
+.content pre {
+  border: 1px solid #7ea0ae;
+  padding: 0.2em;
+  background-color: white;
+}
+
+.content pre {
+  white-space: pre-wrap;
+  font-size: 80%;
+  padding: 0.6em;
+}
+
+.content pre code {
+  border: 0;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -479,5 +501,11 @@ body.modalVisible main {
       hsla(0, 0%, 0%, 1) 0%,
       hsla(0, 0%, 0%, 0) 100%
     );
+  }
+
+  .content code,
+  .content pre {
+    border: 1px solid #1c2436;
+    background-color: black;
   }
 }

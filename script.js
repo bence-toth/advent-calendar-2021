@@ -1,5 +1,5 @@
 const today = new Date();
-const adventBegins = new Date("2021-11-27"); // TODO: Fix me
+const adventBegins = new Date("2021-12-01");
 const day = Math.ceil((today - adventBegins) / (1000 * 60 * 60 * 24));
 
 const openedDays = JSON.parse(localStorage.getItem("openedDays")) || [];
