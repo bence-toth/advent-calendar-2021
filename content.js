@@ -65,23 +65,23 @@ const content = [
       <p>Did you know that the <code>blockquote</code> and <code>q</code> elements support an attribute called <code>cite</code>?</p>
       <p>Using this, you can refer to the document you are quoting from using its URL:</p>
       <pre><code>${[
-        "&lt;blockquote cite='https://en.wikipedia.org/wiki/Front-end_web_development'&gt;",
+        "&lt;blockquote cite='https://en.wikipedia.org<wbr>/wiki<wbr>/Front-end_web_development'&gt;",
         "  Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website.",
         "&lt;/blockquote&gt;",
         "",
-        "According to Wikipedia, &lt;q cite='https://en.wikipedia.org/wiki/HTML5'&gt;HTML5 was first released in a public-facing form on 22 January 2008,[2] with a major update and W3C Recommendation status in October 2014.&lt;/q&gt;",
+        "According to Wikipedia, &lt;q cite='https://en.wikipedia.org<wbr>/wiki<wbr>/HTML5'&gt;HTML5 was first released in a public-facing form on 22 January 2008,[2] with a major update and W3C Recommendation status in October 2014.&lt;/q&gt;",
       ].join("\n")}</code></pre>
       <p>This practice will help search engines understand your content better, and even help your SEO.</p>
       <p>Additionally, there is a HTML element called <code>cite</code>, which is used for the title of the work you were citing. You can use this in combination with the <code>blockquote</code> element, and if you feel fancy, you can even wrap it in a <code>figure</code>. While the <code>cite</code> element does not support the <code>cite</code> property, you can put an anchor link inside:</p>
       <pre><code>${[
         "&lt;figure&gt;",
-        "  &lt;blockquote cite='https://en.wikipedia.org/wiki/HTML5'&gt;",
+        "  &lt;blockquote cite='https://en.wikipedia.org<wbr>/wiki<wbr>/HTML5'&gt;",
         "    &lt;p&gt;HTML5 includes detailed processing models to encourage more interoperable implementations; it extends, improves, and rationalizes the markup available for documents and introduces markup and application programming interfaces (APIs) for complex web applications.&lt;/p&gt;",
         "  &lt;/blockquote&gt;",
         "  &lt;figcaption&gt;",
         "    From the page",
         "    &lt;cite&gt;",
-        "      &lt;a href='https://en.wikipedia.org/wiki/HTML5'&gt;",
+        "      &lt;a href='https://en.wikipedia.org<wbr>/wiki<wbr>/HTML5'&gt;",
         "        HTML5",
         "      &lt;/a&gt;",
         "    &lt;/cite&gt;",
