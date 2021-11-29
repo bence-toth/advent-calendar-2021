@@ -64,6 +64,15 @@ body > footer {
   font-weight: bold;
 }
 
+body > footer > a {
+  color: inherit;
+  margin-inline: 0.2em;
+}
+
+body > footer > a:hover {
+  opacity: 0.8;
+}
+
 body.modalVisible > footer {
   display: none;
 }
