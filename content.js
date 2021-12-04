@@ -336,8 +336,34 @@ const content = [
   },
   {
     // Day #10
-    title: "",
+    title: "Targeting viewport aspect ratio in CSS",
     body: `
+      <p>There is a CSS media feature called <code>aspect-ratio</code> which can be used to target the aspect ratio of the viewport. Similarly to <code>width</code> and <code>height</code>, it is also possible to target minimum and maximum aspect ratios:</p>
+      <pre><code>${[
+        "@media (aspect-ratio: 1 / 1) {",
+        "  /* Exactly a square */",
+        "}",
+        "",
+        "@media (min-aspect-ratio: 1 / 1) {",
+        "  /* Landscape orientation */",
+        "}",
+        "",
+        "@media (max-aspect-ratio: 1 / 1) {",
+        "  /* Portrait orientation */",
+        "}",
+        "",
+        "@media (min-aspect-ratio: 10 / 11) and (max-aspect-ratio: 11 / 10) {",
+        "  /* Pretty close to a square */",
+        "}",
+        "",
+        "@media (min-aspect-ratio: 16 / 9) {",
+        "  /* A full-screen 16:9 video will have space on the sides */",
+        "}",
+        "",
+        "@media (max-aspect-ratio: 16 / 9) {",
+        "  /* A full-screen 16:9 video will have space on the top and the bottom */",
+        "}",
+      ].join("\n")}</code></pre>
     `,
   },
 ];
