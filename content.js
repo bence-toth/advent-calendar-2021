@@ -154,8 +154,48 @@ const content = [
   },
   {
     // Day #6
-    title: "",
+    title: "The ternary operator",
     body: `
+      <p>When you want to conditionally assign a value, instead of an <code>if</code> statement, the ternary operator could come in handy.</p>
+      <pre><code>${[
+        "// Instead of",
+        "let myVariable;",
+        "if (condition) {",
+        "  myVariable = 'then value'",
+        "}",
+        "else {",
+        "  myVariable = 'else value'",
+        "}",
+        "",
+        "// You can simply do",
+        "const myVariable = condition ? 'then value' : 'else value'",
+      ].join("\n")}</code></pre>
+      <p>The same thing works in any expression:</p>
+      <pre><code>${[
+        "// Instead of",
+        "if (condition) {",
+        "  myDiv.style.width = '200px'",
+        "}",
+        "else {",
+        "  myDiv.style.width = '800px'",
+        "}",
+        "",
+        "// You can simply do",
+        "myDiv.style.width = condition ? '200px' : '800px'",
+      ].join("\n")}</code></pre>
+      <p>You can even use it to conditionally access one object property or another:</p>
+      <pre><code>${[
+        "// Instead of",
+        "if (condition) {",
+        "  myDiv.classList.add('hidden')",
+        "}",
+        "else {",
+        "  myDiv.classList.remove('hidden')",
+        "}",
+        "",
+        "// You can simply do",
+        "myDiv.classList[condition ? 'add' : 'remove']('hidden')",
+      ].join("\n")}</code></pre>
     `,
   },
   {
