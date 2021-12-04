@@ -127,7 +127,7 @@ const content = [
         "// Instead of",
         "console.log('myVariable', myVariable)",
         "",
-        "// You can simply do",
+        "// you can simply do",
         "console.log({myVariable})",
       ].join("\n")}</code></pre>
       <p>If you want to log something in the console when a certain condition is met, you can use the <code>console.assert</code> statement:</p>
@@ -137,7 +137,7 @@ const content = [
         "  console.log('myVariable', myVariable)",
         "}",
         "",
-        "// You can simply do",
+        "// you can simply do",
         "console.assert(myVariable > 10, myVariable)",
       ].join("\n")}</code></pre>
       <p>Finally, when printing arrays or objects in the console, you can use <code>console.table</code>, which will print the variable in a very easy to read format. It works nicely with non-flat objects and arrays.</p>
@@ -146,7 +146,7 @@ const content = [
         "console.log(myArray)",
         "console.log(myObject)",
         "",
-        "// You can simply do",
+        "// you can simply do",
         "console.table(myArray)",
         "console.table(myObject)",
       ].join("\n")}</code></pre>
@@ -167,7 +167,7 @@ const content = [
         "  myVariable = 'else value'",
         "}",
         "",
-        "// You can simply do",
+        "// you can simply do",
         "const myVariable = condition ? 'then value' : 'else value'",
       ].join("\n")}</code></pre>
       <p>The same thing works in any expression:</p>
@@ -180,7 +180,7 @@ const content = [
         "  myDiv.style.width = '800px'",
         "}",
         "",
-        "// You can simply do",
+        "// you can simply do",
         "myDiv.style.width = condition ? '200px' : '800px'",
       ].join("\n")}</code></pre>
       <p>You can even use it to conditionally access one object property or another:</p>
@@ -193,15 +193,61 @@ const content = [
         "  myDiv.classList.remove('hidden')",
         "}",
         "",
-        "// You can simply do",
+        "// you can simply do",
         "myDiv.classList[condition ? 'add' : 'remove']('hidden')",
       ].join("\n")}</code></pre>
     `,
   },
   {
     // Day #7
-    title: "",
+    title: "Inline and block shorthands",
     body: `
+      <p>In CSS, if you want to set the margin or padding value of an element to the same value on the top and the bottom, or on the left and the right, you can use the <code>margin-block</code>, <code>margin-inline</code>, <code>padding-block</code>, <code>padding-inline</code> properties respectively:</p>
+      <pre><code>${[
+        "// Instead of",
+        ".myElement {",
+        "  margin-top: 10px;",
+        "  margin-bottom: 10px;",
+        "}",
+        "",
+        "// you can simply do",
+        ".myElement {",
+        "  margin-block: 10px;",
+        "}",
+        "",
+        "// Instead of",
+        ".myElement {",
+        "  margin-left: 10px;",
+        "  margin-right: 10px;",
+        "}",
+        "",
+        "// you can simply do",
+        ".myElement {",
+        "  margin-inline: 10px;",
+        "}",
+        "",
+        "// Instead of",
+        ".myElement {",
+        "  padding-top: 10px;",
+        "  padding-bottom: 10px;",
+        "}",
+        "",
+        "// you can simply do",
+        ".myElement {",
+        "  padding-block: 10px;",
+        "}",
+        "",
+        "// Instead of",
+        ".myElement {",
+        "  padding-left: 10px;",
+        "  padding-right: 10px;",
+        "}",
+        "",
+        "// you can simply do",
+        ".myElement {",
+        "  padding-inline: 10px;",
+        "}",
+      ].join("\n")}</code></pre>
     `,
   },
   {
