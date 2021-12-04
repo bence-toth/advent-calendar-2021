@@ -69,7 +69,7 @@ const content = [
         "  Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website.",
         "&lt;/blockquote&gt;",
         "",
-        "According to Wikipedia, &lt;q cite='https://en.wikipedia.org<wbr>/wiki<wbr>/HTML5'&gt;HTML5 was first released in a public-facing form on 22 January 2008,[2] with a major update and W3C Recommendation status in October 2014.&lt;/q&gt;",
+        "According to Wikipedia, &lt;q cite='https://en.wikipedia.org<wbr>/wiki<wbr>/HTML5'&gt;HTML5 was first released in a public-facing form on 22 January 2008, with a major update and W3C Recommendation status in October 2014.&lt;/q&gt;",
       ].join("\n")}</code></pre>
       <p>This practice will help search engines understand your content better, and even help your SEO.</p>
       <p>Additionally, there is a HTML element called <code>cite</code>, which is used for the title of the work you were citing. You can use this in combination with the <code>blockquote</code> element, and if you feel fancy, you can even wrap it in a <code>figure</code>. While the <code>cite</code> element does not support the <code>cite</code> property, you can put an anchor link inside:</p>
@@ -115,6 +115,71 @@ const content = [
         "  }",
         "}",
       ].join("\n")}</code></pre>
+    `,
+  },
+  {
+    // Day #5
+    title: "Beyond console.log",
+    body: `
+      <p>If you are a fellow <code>console.log</code> enthusiast, you might be delighted to learn a few new tricks.</p>
+      <p>When logging a single variable in the console, instead of labeling your <code>console.log</code> statements with a string, you can put your variable inside an object:</p>
+      <pre><code>${[
+        "// Instead of",
+        "console.log('myVariable', myVariable)",
+        "",
+        "// You can simply do",
+        "console.log({myVariable})",
+      ].join("\n")}</code></pre>
+      <p>If you want to log something in the console when a certain condition is met, you can use the <code>console.assert</code> statement:</p>
+      <pre><code>${[
+        "// Instead of",
+        "if (myVariable > 10) {",
+        "  console.log('myVariable', myVariable)",
+        "}",
+        "",
+        "// You can simply do",
+        "console.assert(myVariable > 10, myVariable)",
+      ].join("\n")}</code></pre>
+      <p>Finally, when printing arrays or objects in the console, you can use <code>console.table</code>, which will print the variable in a very easy to read format. It works nicely with non-flat objects and arrays.</p>
+      <pre><code>${[
+        "// Instead of",
+        "console.log(myArray)",
+        "console.log(myObject)",
+        "",
+        "// You can simply do",
+        "console.table(myArray)",
+        "console.table(myObject)",
+      ].join("\n")}</code></pre>
+    `,
+  },
+  {
+    // Day #6
+    title: "",
+    body: `
+    `,
+  },
+  {
+    // Day #7
+    title: "",
+    body: `
+    `,
+  },
+  {
+    // Day #8
+    title: "",
+    body: `
+    `,
+  },
+  {
+    // Day #9
+    title: "",
+    body: `
+    `,
+  },
+  {
+    // Day #10
+    title: "",
+    body: `
     `,
   },
 ];
