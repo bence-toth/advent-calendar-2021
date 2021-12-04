@@ -252,8 +252,57 @@ const content = [
   },
   {
     // Day #8
-    title: "",
+    title: "CSS inset property",
     body: `
+      <p>In CSS, if you want to set the top, bottom, left, and right properties of an element to the same value, you can use the <code>inset</code> property:</p>
+      <pre><code>${[
+        "// Instead of",
+        ".myElement {",
+        "  position: absolute;",
+        "  top: 0;",
+        "  right: 0;",
+        "  bottom: 0;",
+        "  left: 0;",
+        "}",
+        "",
+        "// you can simply do",
+        ".myElement {",
+        "  position: absolute;",
+        "  inset: 0;",
+        "}",
+      ].join("\n")}</code></pre>
+      <p>It is also possible to set the four values separately, similarly to the margin or padding shorthand:</p>
+      <pre><code>${[
+        "// Instead of",
+        ".myElement {",
+        "  position: absolute;",
+        "  top: 10px;",
+        "  right: 0;",
+        "  bottom: 10px;",
+        "  left: 0;",
+        "}",
+        "",
+        "// you can simply do",
+        ".myElement {",
+        "  position: absolute;",
+        "  inset: 10px 0;",
+        "}",
+        "",
+        "// Instead of",
+        ".myElement {",
+        "  position: absolute;",
+        "  top: 10px;",
+        "  right: 20px;",
+        "  bottom: 30px;",
+        "  left: 40px;",
+        "}",
+        "",
+        "// you can simply do",
+        ".myElement {",
+        "  position: absolute;",
+        "  inset: 10px 20px 30px 40px;",
+        "}",
+      ].join("\n")}</code></pre>
     `,
   },
   {
