@@ -366,4 +366,28 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #11
+    title: "aspect-ratio CSS property",
+    body: `
+      <p>There is a CSS property called <code>aspect-ratio</code> which will help you set the width of an element relative to its height, or vice versa.</p>
+      <p>If you set the <code>aspect-ratio</code> and the <code>width</code> properties, the height of the element will be calculated based on the aspect ratio. Similarly, if you set the <code>aspect-ratio</code> and the <code>height</code> properties, the aspect ratio will determine the width of the element:</p>
+      <pre><code>${[
+        ".tvScreen {",
+        "  width: 400px;",
+        "  aspect-ratio: 16 / 9;",
+        "}",
+        "",
+        ".phoneScreen {",
+        "  height: 80vh;",
+        "  aspect-ratio: 9 / 16;",
+        "}",
+        "",
+        ".square {",
+        "  width: 50%;",
+        "  aspect-ratio: 1 / 1;",
+        "}",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
