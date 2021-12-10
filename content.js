@@ -390,4 +390,54 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #12
+    title: "The &lt;picture&gt; HTML element",
+    body: `
+      <p>You can use the <code>&lt;picture&gt;</code> HTML element to make an image on you page have different sources depending on various properties of the browser and the device, including:</p>
+      <ul>
+        <li>image format support</li>
+        <li>image width</li>
+        <li>device pixel density</li>
+        <li>media features</li>
+      </ul>
+      <p>If you want to use <code>webp</code> images, which is not supported by some browsers, you can use a <code>source</code> element with the <code>type</code> attribute, and provide a fallback image using a different format:</p>
+      <pre><code>${[
+        "&lt;picture&gt;",
+        "  &lt;source srcset='logo.webp' type='image/webp' /&gt;",
+        "  &lt;img src='logo.png' alt='logo' /&gt;",
+        "&lt;/picture&gt;",
+      ].join("\n")}</code></pre>
+      <p>If you want to use an image of higher resolution on screens with higher pixel density, you can use a <code>source</code> element with the <code>type</code> attribute, and provide a fallback image:</p>
+      <pre><code>${[
+        "&lt;picture&gt;",
+        "  &lt;source srcset='logo-big.png 1.5x' /&gt;",
+        "  &lt;img src='logo.png' alt='logo' /&gt;",
+        "&lt;/picture&gt;",
+      ].join("\n")}</code></pre>
+      <p>You can even use multiple image sources with different pixel densities on the same <code>source</code> element:</p>
+      <pre><code>${[
+        "&lt;picture&gt;",
+        "  &lt;source srcset='logo-big.png 1.5x, logo-huge.png 2x' /&gt;",
+        "  &lt;img src='logo.png' alt='logo' /&gt;",
+        "&lt;/picture&gt;",
+      ].join("\n")}</code></pre>
+      <p>Similarly, to use an image of lower resolution when the image on the page is smaller, you can once again use a <code>source</code> element with the <code>type</code> attribute:</p>
+      <pre><code>${[
+        "&lt;picture&gt;",
+        "  &lt;source srcset='logo-tiny.png 80w, logo.png 120w' /&gt;",
+        "  &lt;img src='logo.png' alt='logo' /&gt;",
+        "&lt;/picture&gt;",
+      ].join("\n")}</code></pre>
+      <p>You can also use the <code>media</code> attribute to target media features:</p>
+      <pre><code>${[
+        "&lt;picture&gt;",
+        "  &lt;source srcset='logo-dark.gif' media='(prefers-color-scheme: dark)' /&gt;",
+        "  &lt;source srcset='logo-print.png' media='(print)' /&gt;",
+        "  &lt;source srcset='logo-still.png' media='(prefers-reduced-motion)' /&gt;",
+        "  &lt;img src='logo.gif' alt='logo' /&gt;",
+        "&lt;/picture&gt;",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
