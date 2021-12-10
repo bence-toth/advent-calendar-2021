@@ -248,8 +248,13 @@ body.modalVisible main {
 }
 
 .content p,
-.content pre {
+.content pre,
+.content ul {
   margin-bottom: 1em;
+}
+
+.content ul {
+  margin-left: 2em;
 }
 
 .content code,
