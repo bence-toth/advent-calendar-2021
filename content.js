@@ -440,4 +440,44 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #13
+    title: "Simplified media query syntax targeting viewport width",
+    body: `
+      <p>CSS media queries level 4 introduced a less verbose syntax for targeting viewport width (and height). It is called range context, and it works like the following:</p>
+      <pre><code>${[
+        "/* Old syntax */",
+        "@media (min-width: 800px) {",
+        "  ...",
+        "}",
+        "",
+        "/* Level 4 syntax */",
+        "@media (800px <= width) {",
+        "  ...",
+        "}",
+        "",
+        "/* Old syntax */",
+        "@media (max-width: 1280px) {",
+        "  ...",
+        "}",
+        "",
+        "/* Level 4 syntax */",
+        "@media (width <= 1280px) {",
+        "  ...",
+        "}",
+      ].join("\n")}</code></pre>
+      <p>You can also use both a minimum value in the same query and save an <code>and</code> rule:</p>
+      <pre><code>${[
+        "/* Old syntax */",
+        "@media (min-width: 800px) and (max-width: 1280px) {",
+        "  ...",
+        "}",
+        "",
+        "/* Level 4 syntax */",
+        "@media (800px <= width <= 1280px) {",
+        "  ...",
+        "}",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
