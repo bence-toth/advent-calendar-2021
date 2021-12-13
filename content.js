@@ -484,7 +484,7 @@ const content = [
     // Day #14
     title: "The &lt;kbd&gt; HTML element",
     body: `
-      <p>There is a seldom used semantic HTML element called &lt;kbd&gt; which represents keyboard input from the user. It can be used for hotkeys:</p>
+      <p>There is a seldom used semantic HTML element called <code>&lt;kbd&gt;</code> which represents keyboard input from the user. It can be used for hotkeys:</p>
       <pre><code>${[
         "&lt;p&gt;Press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt + &lt;kbd&gt;T&lt;/kbd&gt to open and close the toolbar.&lt;/p&gt;",
       ].join("\n")}</code></pre>
@@ -509,9 +509,36 @@ const content = [
         "    0 0.1em 0 hsla(0, 0%, 100%, 50%) inset;",
         "}",
       ].join("\n")}</code></pre>
-      <p>However, the &lt;kbd&gt; element can also be used for user input other than hotkeys. If you would like to instruct the user to type something e.g. in the terminal, the &lt;kbd&gt; element is a perfect choice of markup:</p>
+      <p>However, the <code>&lt;kbd&gt;</code> element can also be used for user input other than hotkeys. If you would like to instruct the user to type something e.g. in the terminal, the <code>&lt;kbd&gt;</code> element is a perfect choice of markup:</p>
       <pre><code>${[
         "&lt;p&gt;To install this package, type &lt;kbd&gt;npm install triangle-mosaic&lt;/kbd&gt in your terminal window.&lt;/p&gt;",
+      ].join("\n")}</code></pre>
+    `,
+  },
+  {
+    // Day #15
+    title: "The &lt;output&gt; HTML element",
+    body: `
+      <p>We use <code>&lt;input&gt;</code> elements all the time, but did you know that there is an <code>&lt;output&gt;</code> element, too? It is used to display a result of some operation or calculation which values of <code>&lt;input&gt;</code> elements contributed to. It is also possible to reference the input elements using the <code>for</code> attribute:</p>
+      <pre><code>${[
+        '&lt;input id="number" type="number" value="0" /&gt;',
+        '&lt;input id="percentage" type="range" value="0" min="0" max="100" /&gt;',
+        "",
+        '&lt;output id="result" for="number percentage"&gt;0&lt;/output&gt;',
+        "",
+        "&lt;script&gt;",
+        '  const numberInput = document.getElementById("number");',
+        '  const percentageInput = document.getElementById("percentage");',
+        '  const resultOutput = document.getElementById("result");',
+        "",
+        "  const calculatePercentage = () =&gt; {",
+        "    resultOutput.innerHTML =",
+        "      (Number(numberInput.value) * Number(percentageInput.value)) / 100;",
+        "  };",
+        "",
+        '  numberInput.addEventListener("input", calculatePercentage);',
+        '  percentageInput.addEventListener("input", calculatePercentage);',
+        "&lt;/script&gt;",
       ].join("\n")}</code></pre>
     `,
   },
