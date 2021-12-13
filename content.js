@@ -480,4 +480,39 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #14
+    title: "The &lt;kbd&gt; HTML element",
+    body: `
+      <p>There is a seldom used semantic HTML element called &lt;kbd&gt; which represents keyboard input from the user. It can be used for hotkeys:</p>
+      <pre><code>${[
+        "&lt;p&gt;Press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt + &lt;kbd&gt;T&lt;/kbd&gt to open and close the toolbar.&lt;/p&gt;",
+      ].join("\n")}</code></pre>
+      <p>This is very handy and looks great when styled to looks like a keyboard button:</p>
+      <pre><code>${[
+        "kbd {",
+        "  display: inline-block;",
+        "  vertical-align: middle;",
+        "  white-space: nowrap;",
+        "  line-height: 1;",
+        "  padding: 0.2em 0.4em;",
+        "",
+        "  font-size: 0.9em;",
+        "  font-weight: 700;",
+        "",
+        "  color: hsl(0, 0%, 30%);",
+        "  background-color: hsl(0, 0%, 90%);",
+        "  border: 1px solid hsl(0, 0%, 80%);",
+        "  border-radius: 0.25em;",
+        "  box-shadow:",
+        "    0 0.05em 0 hsla(0, 0%, 0%, 20%),",
+        "    0 0.1em 0 hsla(0, 0%, 100%, 50%) inset;",
+        "}",
+      ].join("\n")}</code></pre>
+      <p>However, the &lt;kbd&gt; element can also be used for user input other than hotkeys. If you would like to instruct the user to type something e.g. in the terminal, the &lt;kbd&gt; element is a perfect choice of markup:</p>
+      <pre><code>${[
+        "&lt;p&gt;To install this package, type &lt;kbd&gt;npm install triangle-mosaic&lt;/kbd&gt in your terminal window.&lt;/p&gt;",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
