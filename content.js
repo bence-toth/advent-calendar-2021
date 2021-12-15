@@ -754,4 +754,31 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #21
+    title: "Lesser known input types",
+    body: `
+      <p>There <code>type</code> attribute of the <code>&lt;input&gt;</code> element is very versatile. There are a lot of lesser known input types which can be very handy when dealing with specific data types:</p>
+      <ul>
+      <li><code>color</code> will render a color picker</li>
+      <li><code>date</code> will render a date picker</li>
+      <li><code>month</code> will render a year and month picker</li>
+      <li><code>week</code> will render a year and week picker</li>
+      <li><code>time</code> will render a time picker</li>
+      <li><code>datetime-local</code> will render a date-time picker</li>
+      <li><code>range</code> will render a slider</li>
+      </ul>
+      <p>For example:</p>
+      <pre><code>${[
+        "&lt;label&gt;Date and time of order&lt;/label&gt;",
+        "&lt;input type='datetime-local' /&gt;",
+        "",
+        "&lt;label&gt;Expected week of delivery&lt;/label&gt;",
+        "&lt;input type='week' /&gt;",
+        "",
+        "&lt;label&gt;Number of items&lt;/label&gt;",
+        "&lt;input type='range' min='1' max='10' /&gt;",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
