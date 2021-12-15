@@ -862,4 +862,30 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #24
+    title: "Accessing the clipboard using JavaScript",
+    body: `
+      <p>Did you know that there is a web api called the Clipboard API? With it, you can get access to the users's clipboard and read its content.</p>
+      <p>For example:</p>
+      <pre><code>${[
+        "navigator.clipboard.readText().then((text) => {",
+        "  console.log('Text on the clipboard:', text);",
+        "});",
+      ].join("\n")}</code></pre>
+      <p>You can also use it to copy to the clipboard:</p>
+      <pre><code>${[
+        "const textToCopy = 'I will be copied to the clipboard';",
+        "navigator.clipboard.writeText(textToCopy).then(",
+        "  () => {",
+        "    console.log('Successfully copied to clipboard');",
+        "  },",
+        "  () => {",
+        "    console.log('Copying to clipboard failed');",
+        "  }",
+        ");",
+      ].join("\n")}</code></pre>
+      <p>It is worth noting that the Clipboard API is gated behind the Permissions API, so it only works in secure (<code>https</code>) contexts, and the user must grant permission before you can interact with the clipboard.
+    `,
+  },
 ];
