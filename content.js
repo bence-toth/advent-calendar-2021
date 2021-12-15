@@ -781,4 +781,26 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #22
+    title: "CSS backdrop-filter",
+    body: `
+      <p>There is a CSS property called <code>backdrop-filter</code>, which works very similarly to the <code>filter</code> property, but instead of applying the specified filters on the element, it applies it to the content below the element. With this you can create some really nice looking effects.</p>
+      <p>For example you can make an element look like glass:</p>
+      <pre><code>${[
+        ".glass {",
+        "  background: hsla(0, 0%, 100%, 25%);",
+        "  backdrop-filter: blur(4px);",
+        "  border: 1px solid hsla(0, 0%, 100%, 15%);",
+        "}",
+      ].join("\n")}</code></pre>
+      <p>Or you can make the element's background look less colorful:</p>
+      <pre><code>${[
+        ".grayBackground {",
+        "  background: hsla(0, 0%, 100%, 50%);",
+        "  backdrop-filter: grayscale(0.75);",
+        "}",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
