@@ -678,4 +678,31 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #18
+    title: "The inputmode attribute",
+    body: `
+      <p>There are various input types like <code>url</code> and <code>number</code>, but in some cases we do not want the restrictions or features they come with, but we want to help the user inputting data regardless.</p>
+      <p>On <code>&lt;input&gt;</code> elements you can use the <code>inputmode</code> attribute which will control the default state of virtual keyboards on mobile devices and the input field is in focus.</p>
+      <p>Possible values are:</p>
+      <ul>
+        <li><code>decimal</code> which will open the numbers keyboard</li>
+        <li><code>numeric</code> which will open the numbers keyboard without the decimal separator</li>
+        <li><code>tel</code> which will open the numbers keyboard extended by the * and # signs</li>
+        <li><code>email</code> a keyboard otimised for email addresses</li>
+        <li><code>url</code> a keyboard otimised for entering URLs</li>
+      </ul>
+      <p>For example:</p>
+      <pre><code>${[
+        "&lt;label&gt;Phone number&lt;/label&gt;",
+        "&lt;input type='text' inputmode='tel' /&gt;",
+        "",
+        "&lt;label&gt;Email address&lt;/label&gt;",
+        "&lt;input type='text' inputmode='email' /&gt;",
+        "",
+        "&lt;label&gt;Social media link&lt;/label&gt;",
+        "&lt;input type='url' inputmode='url' /&gt;",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
