@@ -731,4 +731,27 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #20
+    title: "Grouping options in a &lt;select&gt; dropdown",
+    body: `
+      <p>Did you know that the <code>&lt;select&gt;</code> element can contain <code>&lt;optgroup&gt;</code> elements instead of <code>&lt;option&gt;</code> elements? These can be used to assign the options to named groups.</p>
+      <p>For example:</p>
+      <pre><code>${[
+        "&lt;select&gt;",
+        "  &lt;optgroup label='Weekdays'&gt;",
+        "    &lt;option value='1'&gt;Monday&lt;/option&gt;",
+        "    &lt;option value='2'&gt;Tuesday&lt;/option&gt;",
+        "    &lt;option value='3'&gt;Wednesday&lt;/option&gt;",
+        "    &lt;option value='4'&gt;Thursday&lt;/option&gt;",
+        "    &lt;option value='5'&gt;Friday&lt;/option&gt;",
+        "  &lt;/optgroup&gt;",
+        "  &lt;optgroup label='Weekend'&gt;",
+        "    &lt;option value='6'&gt;Saturday&lt;/option&gt;",
+        "    &lt;option value='7'&gt;Sunday&lt;/option&gt;",
+        "  &lt;/optgroup&gt;",
+        "&lt;/select&gt;",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
