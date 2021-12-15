@@ -657,4 +657,25 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #17
+    title: "The power of variable fonts",
+    body: `
+      <p>By now various variable fonts <a href="https://fonts.google.com/variablefonts#font-families" target="_blank" rel="noopener">have become available</a> to be used on the web. Most of these fonts have some properties which can be fine tuned, like font weight or italic.</p>
+      <p>An interesting thing about these fonts is that transitions and animations can be used to change the font properties over time. This is a very powerful feature which can be used to create nice animation effects. For example:</p>
+      <pre><code>${[
+        '@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");',
+        "",
+        "h1 {",
+        "  font-family: Alegreya, serif;",
+        "  font-weight: 400;",
+        "  transition: font-weight 0.5s;",
+        "}",
+        "",
+        "h1:hover {",
+        "  font-weight: 650;",
+        "}",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];

@@ -270,6 +270,16 @@ body.modalVisible main {
   margin-bottom: 1em;
 }
 
+.content a {
+  color: inherit;
+}
+
+.content a:hover,
+.content a:focus,
+.content a:active {
+  text-decoration: none;
+}
+
 .content ul {
   margin-left: 2em;
 }
