@@ -705,4 +705,30 @@ const content = [
       ].join("\n")}</code></pre>
     `,
   },
+  {
+    // Day #19
+    title: "The &lt;progress&gt; and &lt;meter&gt; elements",
+    body: `
+      <p>There are two seldom used semantic HTML elements called <code>&lt;progress&gt;</code> and <code>&lt;meter&gt;</code>, both of which represent some fractional value.</p>
+      <p>The difference between them is that the <code>&lt;progress&gt;</code> element is intended specifically to show a completion of a certain task, for example pages completed in a multi-page form, or steps completed in a multi-step checkout process. Therefore the <code>&lt;progress&gt;</code> element only supports two non-global attributes, <code>max</code> and <code>value</code>, as the minimum value is always 0.</p>
+      <p>For example:</p>
+      <pre><code>${[
+        "&lt;progress max='10' value='3'&gt;30%&lt;/progress&gt;",
+      ].join("\n")}</code></pre>
+      <p>On the other hand, the <code>&lt;meter&gt;</code> element is more sophisticated. It supports a range of attributes, including <code>min</code>, <code>max</code>, <code>low</code>, <code>high</code>, and <code>optimum</code>. When these attributes are set, the browser will use color coding to show if the value is preferred or not.</p>
+      <p>For example:</p>
+      <pre><code>${[
+        "&lt;meter",
+        "  min='0'",
+        "  optimum='0'",
+        "  low='3'",
+        "  high='7'",
+        "  max='10'",
+        "  value='2'",
+        "&gt;",
+        "  3/10",
+        "&lt;/meter&gt;",
+      ].join("\n")}</code></pre>
+    `,
+  },
 ];
